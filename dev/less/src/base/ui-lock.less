@@ -1,0 +1,33 @@
+.ui-lock:extend(.l-flex-row, .l-flex-align-center) {
+  display: none !important;
+  height: 100%;
+
+  .ui-lock-text {
+    color: @app-black-5;
+    font-family: @font-medium;
+    line-height: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding-left: @app-padding-3;
+  }
+}
+
+.ui-unlock:extend(.l-flex-row, .l-flex-align-center) {
+
+}
+
+.ui-lock, .ui-unlock {
+  font-family: @font-medium;
+}
+
+.loading {
+
+  .ui-lock {
+    display: -webkit-flex !important;
+    display: flex !important;
+  }
+
+  .ui-unlock {
+    display: none;
+  }
+}
