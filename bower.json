@@ -1,0 +1,33 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "0.2.0",
+  "homepage": "https://github.com/Actonate/titan-server-frontend",
+  "authors": [
+    "snehilmodani"
+  ],
+  "description": "Angular frontend Boiler plate",
+  "main": "src/app/main.js",
+  "license": "Proprietary",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-mocks": "1.5.7",
+    "angular-sanitize": "^1.5.7",
+    "angular-animate": "~1.5.7",
+    "requirejs": "Actonate/requirejs#2.2.0-patch1",
+    "angular-ui-router": "0.3.1",
+    "oclazyload": "^1.0.9"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "^1.5.7",
+    "angular-mocks": "1.5.7",
+    "angular-sanitize": "^1.5.7"
+  }
+}
