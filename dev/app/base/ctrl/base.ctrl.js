@@ -28,7 +28,7 @@ define([], function() {
   function controller(logger, Rest) {
 
     var ViewModel = this;
-    var log = logger.log().child('AppBaseController'); 
+    var log = logger.log().child('AppBaseController');
 
     ViewModel.message = 'Hello World!';
     ViewModel.triggerApi = triggerApi;
@@ -36,7 +36,16 @@ define([], function() {
     log.info('Hello World!');
 
     // ///////////////////////////////////////////////////////
-    
+
+    /**
+     * Send a test API call
+     *
+     * @public
+     *
+     * @memberof   act.Base.AppBaseController
+     *
+     * @author     shoaibmerchant
+     */
     function triggerApi() {
       var httpResource = Rest.resource('').get('hello');
 
@@ -46,7 +55,7 @@ define([], function() {
         })
         .catch(function(err) {
           log.error('API Error', err);
-        })
+        });
     }
   }
 

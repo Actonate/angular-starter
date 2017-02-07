@@ -17,7 +17,6 @@ define([
   .config(loggerConfig)
   .config(restConfig);
 
-
   // Run blocks
 
   // /////////////////////////////////////
@@ -26,7 +25,7 @@ define([
   =            Config Blocks            =
   =====================================*/
 
-  RouterConfig.$inject = ['APP_BASE_PATH', '$stateProvider', '$urlRouterProvider', 
+  RouterConfig.$inject = ['APP_BASE_PATH', '$stateProvider', '$urlRouterProvider',
     '$locationProvider', 'lazyProvider'];
 
   /**
@@ -48,7 +47,7 @@ define([
    * @param      {Object}  lazyProvider        Provider instance of act.lazy used to lazy load
    *                                           modules
    */
-  function RouterConfig(APP_BASE_PATH, $stateProvider, $urlRouterProvider, $locationProvider, 
+  function RouterConfig(APP_BASE_PATH, $stateProvider, $urlRouterProvider, $locationProvider,
     lazyProvider) {
 
     var BASE_DIR_CTRL = APP_BASE_PATH + 'app/base/ctrl/';
@@ -128,7 +127,7 @@ define([
    *
    * @author     shoaibmerchant
    *
-   * @param      {Object}   logger               act-log logger
+   * @param      {Object}   loggerProvider       act-log logger
    * @param      {String}   APP_NAME             app name
    * @param      {Boolean}  APP_LOGGING_ENABLED  The app logging enabled or not
    * @param      {String}   APP_LOGGING_LEVEL    Default app logging level

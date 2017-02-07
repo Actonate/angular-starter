@@ -5,7 +5,7 @@ define(['act-lazy', 'act-rest', 'act-log'], function() {
   var actGlobals = angular.module('act.Globals', []);
 
   actGlobals.constant('APP_NAME', 'angular-starter');
-  
+
   /**
    * App Base Path
    */
