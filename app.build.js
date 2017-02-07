@@ -10,11 +10,17 @@ requirejs.config({
   paths: {
     'angular': 'packages/' + 'angular/angular.min',
     'angular-animate': 'packages/' + 'angular-animate/angular-animate.min',
+    'angular-aria': 'packages/' + 'angular-aria/angular-aria.min',
+    'angular-material': 'packages/' + 'angular-material/angular-material.min',
     'angular-ui-router': 'packages/' + 'angular-ui-router/release/angular-ui-router.min',
+    'debug': 'packages/' + 'visionmedia-debug/dist/debug',
     'oclazyload': 'packages/' + 'oclazyload/dist/ocLazyLoad.require.min',
 
     // Common Modules
     'act-lazy': 'common/act-lazy/main',
+    'act-log': 'common/act-log/main',
+    'act-rest': 'common/act-rest/main',
+
 
     // Application Modules
     'app-bootstrap': 'app/app-bootstrap',
@@ -28,10 +34,14 @@ requirejs.config({
       exports: 'angular'
     },
     'angular-animate': ['angular'],
+    'angular-aria': ['angular'],
+    'angular-material': ['angular', 'angular-aria'],
     'oclazyload': ['angular'],
 
     // ACT Modules
     'act-lazy': ['oclazyload'],
+    'act-log': ['angular', 'debug'],
+    'act-rest': ['angular'],
 
 
     // Application Modules
@@ -43,6 +53,9 @@ requirejs.config({
     'main': [
       // 3rd party
       'angular',
+      'angular-material',
+      'angular-animate',
+      'angular-aria'
     ]
   }
 });
@@ -52,7 +65,7 @@ require([
   ],
   function() {
 
-    angular.bootstrap(document, ['titan'], {
+    angular.bootstrap(document, ['act'], {
       strictDi: true
     });
   }

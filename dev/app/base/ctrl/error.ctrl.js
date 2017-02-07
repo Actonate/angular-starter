@@ -1,10 +1,10 @@
 /**
- * @namespace titan.Base
+ * @namespace act.Base
  */
 define([], function() {
 
   angular
-    .module('titan.Base')
+    .module('act.Base')
     .controller('ErrorController', controller);
 
   controller.$inject = [];
@@ -18,7 +18,7 @@ define([], function() {
    *
    * @public
    *
-   * @memberof   titan.Base
+   * @memberof   act.Base
    *
    * @author     shoaibmerchant
    */

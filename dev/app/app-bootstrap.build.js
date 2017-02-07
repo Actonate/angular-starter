@@ -1,18 +1,27 @@
-define(['act-lazy'], function() {
+define(['act-lazy', 'act-rest', 'act-log'], function() {
 
-  // Titan Globals Constants -----------------------------------------------------------------------
+  // act Globals Constants -----------------------------------------------------------------------
 
-  var titanGlobals = angular.module('titan.Globals', []);
+  var actGlobals = angular.module('act.Globals', []);
 
+  actGlobals.constant('APP_NAME', 'angular-starter');
+  
   /**
    * App Base Path
    */
   // @if NODE_ENV=='PRODUCTION'
-  titanGlobals.constant('APP_BASE_PATH', '/' + '/* @echo buildPath */' + '/');
+  actGlobals.constant('APP_BASE_PATH', '/' + '/* @echo buildPath */' + '/');
+  actGlobals.constant('APP_LOGGING_ENABLED', false);
+  actGlobals.constant('APP_LOGGING_LEVEL', 'error');
+  actGlobals.constant('APP_REST_URL', 'http://your-production-url-here');
   // @endif
 
   // @if NODE_ENV=='DEVELOPMENT' || NODE_ENV == 'LOCAL'
-  titanGlobals.constant('APP_BASE_PATH', '');
+  actGlobals.constant('APP_BASE_PATH', '');
+  actGlobals.constant('APP_LOGGING_ENABLED', true);
+  actGlobals.constant('APP_LOGGING_LEVEL', 'trace');
+  actGlobals.constant('APP_REST_URL', 'http://localhost:8081');
+
   // @endif
 
   /**
@@ -26,17 +35,19 @@ define(['act-lazy'], function() {
 
   // App Module Definitions Starts here -----------------------------------------------------------
 
-  // Base for All v2 Modules
+  // Base for All Modules
 
-  angular.module('titan.Base', [
+  angular.module('act.Base', [
     // 3rd party
     'ui.router',
-    // titan modules
-    'titan.Globals',
+    // act modules
+    'act.Globals',
     'act.lazy',
+    'act.rest',
+    'act.log'
   ]);
 
-  // All v2 Modules
-  angular.module('titan.Main', ['titan.Base']);
+  // Define all Modules
+  angular.module('act.Main', ['act.Base']);
 
 });

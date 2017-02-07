@@ -1,9 +1,5 @@
 module.exports = function(grunt) {
 
-  var titanCore = require('@storedock/titan-core');
-
-  var jsSettings = titanCore.jsSettings;
-
   var source = ['<%= config.appFolder %>/**/**/*.js'];
   var dest = './';
   var cwd = '<%= config.devFolder %>';

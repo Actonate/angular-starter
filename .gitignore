@@ -55,10 +55,6 @@ zsh.exe.stackdump
 # Skip dev fonts
 # /assets/fonts/typography/*
 
-# Syncfusion Files
-/bower_components/syncfusion
-/packages/syncfusion
-
 # Common packages (requiring build)
 common/act-lazy/main.js
 common/act-translate/main.js

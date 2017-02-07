@@ -34,11 +34,6 @@ module.exports = function(config) {
       },
 
       // Node Modules
-      {
-        pattern: 'node_modules/@storedock/**/*.js',
-        included: false
-      },
-
       // All Common Packages
       {
         pattern: 'common/**/*.js',

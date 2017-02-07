@@ -1,13 +1,13 @@
 /**
- * @namespace titan.Base
+ * @namespace act.Base
  */
 define([], function() {
 
   angular
-    .module('titan.Base')
+    .module('act.Base')
     .controller('AppBaseController', controller);
 
-  controller.$inject = [];
+  controller.$inject = ['logger', 'Rest'];
 
   return controller;
 
@@ -18,14 +18,36 @@ define([], function() {
    *
    * @public
    *
-   * @memberof   titan.Base
+   * @memberof   act.Base
    *
    * @author     snehilmodani
    *
+   * @param      {Object}  logger  act-log logger
+   * @param      {Object}  Rest    act-rest REST Client
    */
-  function controller() {
+  function controller(logger, Rest) {
 
-    // var ViewModel = this;
+    var ViewModel = this;
+    var log = logger.log().child('AppBaseController'); 
+
+    ViewModel.message = 'Hello World!';
+    ViewModel.triggerApi = triggerApi;
+
+    log.info('Hello World!');
+
+    // ///////////////////////////////////////////////////////
+    
+    function triggerApi() {
+      var httpResource = Rest.resource('').get('hello');
+
+      httpResource()
+        .then(function(res) {
+          log.info('API Response', res.data);
+        })
+        .catch(function(err) {
+          log.error('API Error', err);
+        })
+    }
   }
 
 });

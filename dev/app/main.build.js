@@ -1,21 +1,25 @@
 /**
- * @namespace titan
+ * @namespace act
  */
 define([
   // Base Config & Req
-  'templates', 'app-bootstrap',
+  'app-bootstrap',
 
-  // V2 Modules Configs
+  // Modules Configs
   'app/base/base.config'
 ], function() {
 
-  angular.module('titan', [
-    'titan.Base',
-
-    // 'titan.Cache',
+  angular.module('act', [
+    'act.Base',
+    'act.Globals',
 
     // All V2 Modules
-    'titan.Globals'
+    'act.Main',
+
+    // All 3rd party modules
+    'ngMaterial',
+    'ngAnimate',
+    'ngAria'
   ]);
 
   // /////////////////////////////////////
