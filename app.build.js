@@ -15,7 +15,8 @@ requirejs.config({
     'angular-ui-router': 'packages/' + 'angular-ui-router/release/angular-ui-router.min',
     'debug': 'packages/' + 'visionmedia-debug/dist/debug',
     'oclazyload': 'packages/' + 'oclazyload/dist/ocLazyLoad.require.min',
-
+	 'angular-material-sidemenu':'packages/'+'angular-material-sidemenu/dest/angular-material-sidemenu',
+      'angular-material-icons':'packages/'+'angular-material-icons/angular-material-icons',
     // Common Modules
     'act-lazy': 'common/act-lazy/main',
     'act-log': 'common/act-log/main',
@@ -37,7 +38,8 @@ requirejs.config({
     'angular-aria': ['angular'],
     'angular-material': ['angular', 'angular-aria'],
     'oclazyload': ['angular'],
-
+	 'angular-material-sidemenu':['angular','angular-material'],
+    'angular-material-icons':['angular'],
     // ACT Modules
     'act-lazy': ['oclazyload'],
     'act-log': ['angular', 'debug'],
@@ -55,7 +57,9 @@ requirejs.config({
       'angular',
       'angular-material',
       'angular-animate',
-      'angular-aria'
+      'angular-aria',
+	  'angular-material-sidemenu',
+      'angular-material-icons'
     ]
   }
 });
