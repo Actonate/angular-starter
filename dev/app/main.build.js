@@ -6,7 +6,8 @@ define([
   'app-bootstrap',
 
   // Modules Configs
-  'app/base/base.config'
+  'app/auth/auth.config',
+  'app/main/main.config'
 ], function() {
 
   angular.module('act', [
@@ -19,7 +20,8 @@ define([
     // All 3rd party modules
     'ngMaterial',
     'ngAnimate',
-    'ngAria'
+    'ngAria',
+	'ngMaterialSidemenu'
   ]);
 
   // /////////////////////////////////////
